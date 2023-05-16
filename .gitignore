@@ -20,35 +20,35 @@ back-end/.vscode
 
 
 
-#front end ignore
-front-end
+#front end ign
 # Compiled output
-front-end/dist
-front-end/tmp
-front-end/out-tsc
-front-end/bazel-out
+Angular/dist
+Angular/tmp
+Angular/out-tsc
+Angular/bazel-out
 
 # Node
-front-end/node_modules
-front-end/npm-debug.log
-front-end/yarn-error.log
+Angular/node_modules
+Angular/npm-debug.log
+Angular/yarn-error.log
 
 # IDEs and editors
-front-end/.idea/
-front-end/.project
-front-end/.classpath
-front-end/.c9/
+Angular/.idea/
+Angular/.project
+Angular/.classpath
+Angular/.c9/
 
 # Miscellaneous
-front-end/.angular/cache
-front-end/.sass-cache/
-front-end/connect.lock
-front-end/coverage
-front-end/libpeerconnection.log
-front-end/testem.log
-front-end/typings
+Angular/.angular
+Angular/.vscode
+Angular/.sass-cache/
+Angular/connect.lock
+Angular/coverage
+Angular/libpeerconnection.log
+Angular/testem.log
+Angular/typings
 
 # System files
-front-end/.DS_Store
-front-end/Thumbs.db
+Angular/.DS_Store
+Angular/Thumbs.db
 
