@@ -21,7 +21,7 @@ back-end/.vscode
 
 
 #front end ignore
-
+front-end
 # Compiled output
 front-end/dist
 front-end/tmp
