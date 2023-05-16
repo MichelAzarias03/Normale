@@ -17,23 +17,13 @@ use App\Http\Controllers\Api\ParticipantController;
 |
 */
 
-
-Route::prefix("/regions")->controller(RegionController::class)->group(function(){
+Route::prefix("/abonne")->controller(AbonneController::class)->group(function(){
     Route::get("/", "index");
-    Route::get("/{region}", "show")->where(["region"=>"[0-9]+"]);
+    Route::get("/{abonne}", "show")->where(["abonne"=>"[0-9]+"]);
     Route::post("/store", "store");
-    Route::post("/{region}/update", "update")->where(["region"=>"[0-9]+"]);
-    Route::get("/{region}/delete", "destroy")->where(["region"=>"[0-9]+"]);
-
-});
-
-Route::prefix("/participants")->controller(ParticipantController::class)->group(function(){
-    Route::get("/", "index");
-    Route::get("/{participant}", "show")->where(["participant"=>"[0-9]+"]);
-    Route::post("/store", "store");
-    Route::post("{participant}/update", "update")->where(["participant"=>"[0-9]+"]);
-    Route::get("{participant}/delete", "destroy")->where(["participant"=>"[0-9]+"]);
-    Route::get("{participant}/toggle-etat", "toggleEtat")->where(["participant"=>"[0-9]+"]);
+    Route::post("{abonne}/update", "update")->where(["abonne"=>"[0-9]+"]);
+    Route::get("{abonne}/delete", "destroy")->where(["abonne"=>"[0-9]+"]);
+    Route::get("{abonne}/toggle-etat", "toggleEtat")->where(["abonne"=>"[0-9]+"]);
 
 });
 

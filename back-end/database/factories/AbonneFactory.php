@@ -9,7 +9,7 @@ use Illuminate\Support\Arr;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Participant>
  */
-class ParticipantFactory extends Factory
+class AbonneFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,15 +20,17 @@ class ParticipantFactory extends Factory
     {
         return [
             "nom"=>fake()->name(),
-            "login"=>fake()->unique()->firstName(),
-            "pwd"=>Str::random(12),
+            "prenom"=>fake()->unique()->firstName(),
             "email"=>fake()->email(),
-            "etat"=>Arr::random([true, false]),
-            "tel"=>fake()->e164PhoneNumber(),
+            "telephone"=>fake()->e164PhoneNumber(),
+            "code_postal"=>fake()->e164PhoneNumber(),
             "age"=>fake()->numberBetween(21, 120),
             "sexe"=>fake()->randomElement(["m", "f"]),
-            "status"=>fake()->randomElement(["e", "c"]),
-            "id_region"=>fake()->numberBetween(1, 20),
+            "ville"=>fake()->randomElement(["e", "c"]),
+            "proffession"=>fake()->randomElement(["e", "c"]),
+            "pays"=>fake()->randomElement(["e", "c"]),
+            "rue"=>fake()->randomElement(["e", "c"]),
+            "id_mot"=>fake()->numberBetween(1, 20),
         ];
     }
 }

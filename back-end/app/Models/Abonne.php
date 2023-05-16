@@ -27,35 +27,37 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
- * @property Region $region
+ * @property Motivation $motivation
  *
  * @package App\Models
  */
-class Participant extends Model
+class Abonne extends Model
 {
     use HasFactory;
-	protected $table = 'participant';
+	protected $table = 'Abonne';
 
 	protected $casts = [
 		'age' => 'int',
-		'id_region' => 'int'
+		'id_mot' => 'int'
 	];
 
 	protected $fillable = [
 		'nom',
-		'login',
-		'pwd',
-		'email',
-		'etat',
-		'tel',
+		'prenom',
 		'age',
 		'sexe',
-		'status',
-		'id_region'
+		'proffession',
+		'rue',
+		'code_postal',
+		'ville',
+		'pays',
+		'telephone',
+		'email',
+		'id_mot'
 	];
 
-	public function region()
+	public function motivation()
 	{
-		return $this->belongsTo(Region::class, 'id_region');
+		return $this->belongsTo(Motivation::class, 'id_mot');
 	}
 }

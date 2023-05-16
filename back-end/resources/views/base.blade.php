@@ -17,37 +17,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand fst-italic" href="#">Elections</a>
+                <a class="navbar-brand fst-italic" href="#">Normale</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a @class([
-                            'nav-link',
-                            'active' =>
-                                request()->route()->getName() === 'elections',
-                        ]) href="{{ route('elections') }}">Elections</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('participants.index') }}" @class([
-                            'nav-link',
-                            'active' => str_starts_with(
-                                request()->route()->getName(),
-                                'participants.'),
-                        ])>participants</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a href="{{ route('region.index') }}" @class([
                             'nav-link',
                             'active' => str_starts_with(
                                 request()->route()->getName(),
-                                'region.'),
-                        ])>Regions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('inscription') }}" @class([
-                            'nav-link',
-                            'active' =>
-                                request()->route()->getName() === 'inscription',
-                        ])>S'inscrire</a>
+                                'motivation.'),
+                        ])>Motivations</a>
                     </li>
                 </ul>
             </div>

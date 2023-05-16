@@ -12,10 +12,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class Region
+ * Class Motivation
  *
- * @property int $id
- * @property string $label
+ * @property int $id_mot
+ * @property string $intitule
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  *
@@ -23,18 +23,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *
  * @package App\Models
  */
-class Region extends Model
+class Motivation extends Model
 {
     use HasFactory;
 
-	protected $table = 'region';
+	protected $table = 'motivation';
 
 	protected $fillable = [
-		'label'
+		'intitule'
 	];
 
-	public function participants()
+	public function abonnes()
 	{
-		return $this->hasMany(Participant::class, 'id_region');
+		return $this->hasMany(Abonne::class, 'id_mot');
 	}
 }

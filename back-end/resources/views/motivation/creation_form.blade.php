@@ -1,6 +1,6 @@
 @csrf
 <div class="mb-3">
-    <label for="label" class="form-label">Nom de la région</label>
+    <label for="label" class="form-label">Libelle de la motivation</label>
     <input type="text" name="label" id="label" class="form-control" required
         value="{{ old('label', $region->label) }}">
     @error('label')

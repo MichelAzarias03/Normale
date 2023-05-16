@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Region>
  */
-class RegionFactory extends Factory
+class MotivationFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class RegionFactory extends Factory
     public function definition(): array
     {
         return [
-             "label"=>fake()->unique()->state()
+             "libelle"=>fake()->unique()->state()
         ];
     }
 }

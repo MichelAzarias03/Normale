@@ -25,7 +25,7 @@ class RegionFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "label"=>["required", "max:30",  Rule::unique("Region", "label")->ignore($this->route()->parameter("region"))]
+            "label"=>["required", "max:30",  Rule::unique("Motivation", "label")->ignore($this->route()->parameter("motivation"))]
         ];
     }
     public function failedValidation(Validator $validator)

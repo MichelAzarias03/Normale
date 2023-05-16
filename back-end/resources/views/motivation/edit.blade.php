@@ -1,17 +1,16 @@
 @extends('base')
 
-@section('title', 'inscription')
+@section('title', 'Edition')
 @section('content')
     <div class=" my-5 row">
         <div class="col-0 col-lg-3"></div>
         <div class="col-12 col-lg-6 border p-3 shadow rounded">
-            <h4>Créer une nouvelle région</h4>
-            <form action="{{ route('region.store') }}" method="post">
+            <form action="{{ route('motivation.update', ['motivation' => $motivation]) }}" method="post">
+                <h4>Editer la motivation</h4>
                 @include('region.creation_form')
             </form>
         </div>
         <div class="col-0 col-lg-3"></div>
-
     </div>
 
 @endsection
